@@ -210,6 +210,22 @@ python parse_test_res.py PATH_TO_RESULTS
 If you use this code in your research, please kindly cite the following paper
 
 ```
+@article{DingWLYZXP24,
+  author       = {Kun Ding and
+                  Ying Wang and
+                  Pengzhang Liu and
+                  Qiang Yu and
+                  Haojian Zhang and
+                  Shiming Xiang and
+                  Chunhong Pan},
+  title        = {Multi-task prompt tuning with soft context sharing for vision-language
+                  models},
+  journal      = {Neurocomputing},
+  volume       = {603},
+  pages        = {128290},
+  year         = {2024},
+}
+
 @article{softcpt,
     title={Prompt Tuning with Soft Context Sharing for Vision-Language Models},
     author={Kun Ding, Ying Wang, Pengzhang Liu, Qiang Yu, Haojian Zhang, Shiming Xiang and Chunhong Pan},
