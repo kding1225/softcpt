@@ -1,16 +1,12 @@
-# [Prompt Tuning with Soft Context Sharing for Vision-Language Models](https://arxiv.org/abs/2208.13474)
+# [Prompt Tuning with Soft Context Sharing for Vision-Language Models](https://www.sciencedirect.com/science/article/abs/pii/S0925231224010610)
 
-Vision-language models have recently shown great potential on many computer vision tasks. Meanwhile,
-prior work demonstrates prompt tuning designed for vision-language models could acquire superior performance on few-shot
-image recognition compared to linear probe, a strong baseline. In real-world applications, many few-shot tasks are correlated,
-particularly in a specialized area. However, such information is ignored by previous work. Inspired by the fact that modeling task
-relationships by multi-task learning can usually boost performance, we propose a novel method SoftCPT (Soft Context Sharing for Prompt Tuning)
-to fine-tune pre-trained vision-language models on multiple target few-shot tasks, simultaneously. Specifically, we design a task-shared meta
-network to generate prompt vector for each task using pre-defined task name together with a learnable meta prompt as input. As such,
-the prompt vectors of all tasks will be shared in a soft manner. The parameters of this shared meta network as well as the meta prompt
-vector are tuned on the joint training set of all target tasks. Extensive experiments on three multi-task few-shot datasets show that SoftCPT
-outperforms the representative single-task prompt tuning method CoOp by a large margin, implying the effectiveness of multi-task learning
-in vision-language prompt tuning. The source code and data will be made publicly available.
+Vision–language models have recently shown great potential on many tasks in computer vision. Meanwhile, prior work demonstrates prompt tuning designed for vision–language models could acquire superior performance on few-shot image recognition compared to linear probe, a strong baseline. In practice, many few-shot tasks are inherently correlated, particularly within specialized domains. However, such information is overlooked previously. Inspired by the fact that modeling task relationship by multi-task learning can usually boost performance, we propose a novel method SoftCPT (Soft Context Sharing for Prompt Tuning) to tune pre-trained vision–language models on multiple target few-shot tasks jointly. Specifically, we design a task-shared meta network to generate prompt context for each task using task name together with a learnable task context as input. The parameters of this meta network as well as the task context are tuned on the joint training set of all tasks. As such, the prompt context of all tasks will be shared in a soft manner. Extensive experiments across four multi-task few-shot datasets covering 44 tasks and 1593 categories demonstrate that SoftCPT significantly outperforms single-task prompt tuning methods, highlighting the effectiveness of multi-task learning for vision–language prompt tuning.
+
+<p align="center">
+    <img src="figure/method.jpg" width="90%">
+    
+Unlike CoOp, a meta network is introduced to produce learnable context for each task. The meta network consists of a frozen text encoder and a learnable sub-network. The text encoder extracts task features from task names, while the sub-network transforms the task features to learnable context of class names. For model training, SoftCPT uses samples from all tasks and the loss is first computed independently for each task. The summed loss of all tasks is then used for backpropagation (ref. Eq. (8)). In the figure, [TASK] denotes token embeddings of task name, [CLASS] denotes token embeddings of a certain class name in a task.
+</p>
 
 ## Installation
 Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp), please refer to it for the installation.
@@ -234,5 +230,5 @@ If you use this code in your research, please kindly cite the following paper
 }
 ```
 
-## Acknowledgments
+## Acknowledgements
 We would like to thank [@KaiyangZhou](https://github.com/KaiyangZhou/CoOp) for sharing the code.
