@@ -202,6 +202,25 @@ sh linearprob.sh fashion20 rn50 19
 python parse_test_res.py PATH_TO_RESULTS
 ```
 
+## Results
+
+Compared methods:
+- LP-CLIP: the linear probe CLIP reported in CLIP
+- CoOp-CA: the class-agnostic [CoOp](https://github.com/KaiyangZhou/CoOp) applied to each task separately
+- CoOp-CS: the class-specific CoOp applied to each task separately
+- CoOp-MT: a shared prompt context for all tasks and all classes is learned in CoOp in a multi-task manner
+- ZS-CLIP: zero-shot CLIP
+- CoCoOp: Conditional Prompt Learning for Vision-Language Models, CVPR 2022
+- ProGrad: Prompt-aligned Gradient for Prompt Tuning, ICCV 2023
+- KgCoOp: Visual-Language Prompt Tuning with Knowledge-guided Context Optimization, CVPR 2023
+- PLOT: Prompt Learning with Optimal Transport for Vision-Language Models, ICLR 2023
+- ProtoNet: Prototypical Networks for Few-shot Learning, NIPS 2017
+- SoftCPT-NATS and SoftCPT-NATA: our multi-task based method
+
+<p align="center">
+    <img src="figure/results.png" width="90%">
+</p>
+
 ## Citation
 If you use this code in your research, please kindly cite the following paper
 
