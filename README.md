@@ -15,7 +15,7 @@ Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp), please refer t
 Please refer to CoOp for downloading the datasets used in General-10. The datasets should be put into the subfolders according to the
 `dataset_dir` class attribute in each dataset class. For downloading the datasets used in Plant-6, please refer to the link provided in
 our original paper. The collected Fashion-20 dataset can be downloaded from [百度网盘](https://pan.baidu.com/s/1ITXWaRVVXi1PLnbXVa_kjA?pwd=67c4). 
-The access code is **67c4**. This dataset is specialized dataset for fashion classification, which has about 24K images in 20 tasks. All images are
+The access code is **67c4**. It is specialized dataset for fashion classification, which has about 24K images in 20 tasks. All images are
 obtained by searching on web using pre-defined keywords.
 
 ## How to Run
