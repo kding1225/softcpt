@@ -14,7 +14,8 @@ Our code is based on [CoOp](https://github.com/KaiyangZhou/CoOp), please refer t
 ## Datasets
 Please refer to CoOp for downloading the datasets used in General-10. The datasets should be put into the subfolders according to the
 `dataset_dir` class attribute in each dataset class. For downloading the datasets used in Plant-6, please refer to the link provided in
-our original paper. The Fashion-20 dataset will be released soon.
+our original paper. The Fashion-20 dataset can be downloaded from [BaiDu Pan](https://pan.baidu.com/s/1ITXWaRVVXi1PLnbXVa_kjA?pwd=67c4). 
+The access code is **67c4**.
 
 ## How to Run
 Set environment variables in scripts/set_env.sh first.
